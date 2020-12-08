@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6 - Decisions in Code</title>
+    <style>
+        button {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<script>
+    /*
+    
+        When you write a programing language, you'll usually want to have different things happen depending on how the user is interacting with the web page or web app. This is where conditional statements come in.
+
+        Conditional statements allow you to have your JS code make decisions....... If Else statements are the most important conditional statements. 
+    
+    */
+
+    //if conditional statement - if one is less than 4 say it's true. If it's false, js will just skip over the code.
+    if (1 < 4) {
+        console.log("Yes! It's true!");// Yes it is true
+    }
+
+    //If Else statments return true or false statements which also means yes and no or 1 - 0 to the computer. To computers 1 yes and 0 is false.
+
+
+    //Adding else - By adding an else statment we are forcing the computer to give us an answer rather than letting it just skip over the code if it's false.
+    if (1 > 4) {
+        console.log("Yes! It's true!");// Yes it is true
+    } else {
+        console.log("It's not true!!!");
+    }
+
+</script>
+
+<body>
+    <h1>Chapter 6 - Decisions in Code (conditionals) </h1>
+
+    <button type="button" id="clicker">Click Me!</button>
+
+    <div id="popup">
+        <h1>Welcome to Muscle and Life!</h1>
+        <p>I'm Nick and this is my digital home where I come to share valuable information with my readers.
+        </p>
+
+        <p>
+            Thanks for stopping by!
+        </p>
+    </div>
+
+    <p id="first-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor aut excepturi magnam fugit
+        voluptatum,
+        quod, deserunt sint dolore repellat consequatur quisquam repudiandae quas impedit molestiae molestias, corporis
+        exercitationem possimus? Magni repudiandae quos aliquid laborum libero! Modi impedit aliquid quasi doloribus
+        laudantium maxime, cumque sequi corporis, sed distinctio esse aliquam inventore enim molestias architecto
+        doloremque vero? Neque quis aliquam voluptate. Eaque, explicabo, blanditiis cupiditate molestias itaque non
+        repudiandae aperiam facere dolore eum sequi autem minus eligendi. Optio adipisci facilis quidem, blanditiis
+        totam esse praesentium sunt tempore veniam fugiat labore eius excepturi numquam saepe, cumque libero dignissimos
+        sed in quaerat laborum?</p>
+
+
+    <script>
+        //This code grabs our paragraph and displays it in the js console.
+        var target = document.getElementById("first-p");
+        //innerHTML allows you to grab text and tags from an HTML page
+        var currentValue = target.innerHTML;
+        console.log(currentValue);
+        alert(currentValue);
+
+        //Creating a popup message with JS
+        var element = document.getElementById('popup');
+        var message = element.innerHTML;
+        alert(message);
+
+        //Checking for characters using indexOf (-1 means it can't find what we want. Otherwise it will return the location of the chracter we are looking for starting from 0 and counting up.)
+        var str = 'This is it';
+        var result = str.indexOf("t");
+        console.log(result);
+
+        //putting our data into if else statment using a comparison operator
+        if (result !== -1) {
+            console.log("Result is: " + result);
+        } else {
+            console.log("Result is: " + result);
+        }
+
+    </script>
+</body>
+
+</html>

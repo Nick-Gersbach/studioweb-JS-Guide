@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 12 - Content Editable</title>
+</head>
+<style>
+    /* CSS Styles (Content Editable) */
+
+    #editable-element {
+        background: #dfe4df;
+        width: 400px;
+        height: 200px;
+        padding: 10px;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+        margin: 0 10px;
+    }
+</style>
+<!-- 
+    Notes
+
+
+    
+ -->
+
+<body>
+    <p id="editable-element"></p>
+    <div class="buttons">
+        <button type="button" id="edit-content">Edit Content</button>
+        <button type="button" id="stop-edit">Stop Edit</button>
+    </div>
+
+
+
+    <script>
+
+        // Edit the Content
+        function editContent() {
+            var editMe = document.getElementById("editable-element");
+            editMe.contentEditable = true;
+            editMe.focus();
+        }
+
+        document.getElementById("edit-content").onclick = function () {
+            editContent();
+        }
+
+        // Stop Editing content
+        function cancelEdit() {
+            var noEdit = document.getElementById("editable-element");
+            noEdit.contentEditable = false;
+        }
+
+
+        document.getElementById("stop-edit").onclick = function () {
+            cancelEdit();
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

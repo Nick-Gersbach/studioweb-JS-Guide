@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5 Functions</title>
+    <style>
+        p {
+            cursor: pointer;
+        }
+
+        button {
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input {
+            display: block;
+
+        }
+    </style>
+</head>
+
+<!-- 
+    When you write code in a function you are saving it for later until you activate it.
+
+    Methods are the built in words like the date() method. Methods are basically built in js functions that automatically do tasks for you.
+
+    An object in javascript is just a big package of code.
+
+    A function that is inside of an object it is called a method.
+ -->
+
+
+<body>
+    <h1>Chapter 5 Functions</h1>
+
+    <input id="text-top" type="text">
+
+    <button type="button" id="activator">Activate</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quia iure accusantium itaque eaque enim ipsum
+        repellendus magnam praesentium tempora modi nulla minima rerum architecto laboriosam laborum, repellat quis ea,
+        est quisquam quam voluptas beatae! Ut, necessitatibus? Similique, voluptates, facilis accusantium dolores
+        recusandae ratione illum esse distinctio magnam doloribus tempora.</p>
+
+    <button id="checker" type="button">Checker</button>
+
+    <script>
+
+        //Changing a variable value
+        var dogType = 'pitbull';
+        dogType = 'poodle';
+        console.log(dogType);
+
+        document.getElementById('text-top').onclick = function () {
+            alert('You are about to enter text in the text box. Do you want to proceed?');
+        }
+
+        alert('This alert is outside of the function.');
+
+        //Using the indexOf method. This allows you to see if a word or symbol is in a string of text. This is used in form validation.
+
+        //indexOf(): searching for the @ symbol in some text:
+        var email = "nick@yahoo.com";
+        var atSymbol = email.indexOf("@");
+        console.log(atSymbol); // Console spits out 4 because the @ symbol is in the 4th place when starting the count from 0 as we do in programming.
+
+        //More IndexOf examples
+        var myName = 'Nicholas Gersbach';
+        var findLetter = myName.indexOf('N');
+        console.log(findLetter); //Console says 0
+
+        var child = 'James';
+        var letterFinder = child.indexOf('m');
+        console.log(letterFinder);
+
+        /*Javascript has things called global functions. A couple of those global functions are...
+        
+        isNaN - Determines if a value is an illegal number... Is it a number or not? it will return a true or false.
+
+
+        parseInt() - Parses (sorts through) a string and returns an integer (number). It looks through data and returns the numbers from a string.
+
+        !Important - parseInt needs to have the number in front of the text in a string to find it.
+        
+        */
+
+        //isNan Example
+        function numberCheck() {
+            var myNumber = 'cookies';
+            var result = isNaN(myNumber);
+            console.log(result);
+        }
+
+        //activating numberCheck
+        document.getElementById("activator").onclick = function () {
+            numberCheck();
+        }
+
+        //Using parseInt
+        function intCheck() {
+            var myNumber = "32 cookies";
+            var result = parseInt(myNumber);
+            console.log(result);
+            console.log(result + 32);
+            console.log(myNumber + 32);
+        }
+
+        //activating parseInt
+        document.getElementById("checker").onclick = function () {
+            intCheck();
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

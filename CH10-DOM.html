@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10 - The DOM</title>
+    <style>
+
+
+    </style>
+</head>
+<!-- 
+    There are 3 ways to insert HTML into a web page with JS
+
+    1.document.write() - An olod way that you'll never use
+    2. innerHTML - You will use often
+    3.DOM manipulation methods
+ -->
+
+<body>
+    <h1>The HTML DOM</h1>
+
+    <div id="my-div">
+
+        <input type="button" id="button" value="Activate!">
+
+        <p id="paragraph"></p>
+
+    </div>
+
+    <script>
+
+        //#1 - Using document.write() - It deletes all other HTML when used before the rest of the page loads
+        function writeME() {
+            document.write("<h2>Hello World!</h2>");
+        }
+
+        document.getElementById("button").onclick = function () {
+            writeME();
+        }
+
+        //#2 - Using innerHTML - 
+        var theText = "Blah blah blah blah blah blah";
+        var targetDiv = document.getElementById("my-div");
+        targetDiv.innerHTML = theText;
+
+        //#3 Using DOM Manipulation Methods
+
+        /* Step 1 - Create a tag */
+
+        var pGraph = document.createElement("p");
+
+        /*Step 2 - Add Text to the tag */
+
+        var node = document.createTextNode("The new text");
+        pGraph.appendChild(node);
+
+        /*Step 3 - Add the new p tag to the div */
+
+        var targetDiv = document.getElementById("my-div");
+        targetDiv.appendChild(pGraph);
+        console.log(targetDiv.innerHTML);
+
+
+
+    </script>
+</body>
+
+</html>

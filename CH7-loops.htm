@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 - Loops</title>
+</head>
+
+<!-- 
+    Loops are built in mechanisms that allow you to execute code over and over again. They are used a lot in video games.
+
+    Types of Loops
+
+    1. While -
+
+    2. Do/While
+
+    3. Do/While
+
+    4. For/In
+
+ -->
+
+<body>
+    <h1>Chapter 7 - Loops</h1>
+
+    <button type="button" id="looper">Do It Again!</button>
+
+    <br>
+    <br>
+
+    <button type="button" id="nick-looper">Do Nick's Loop!</button>
+
+    <br>
+    <br>
+
+    <button type="button" id="third-looper">Do The Third Loop!</button>
+
+    <br>
+    <br>
+
+    <input style="padding: 15px 30px; border-radius: 4px; background: purple; color: white;" type="button"
+        id="write-looper">Write My Loop!</button>
+
+    <p id="target"></p>
+
+    <script>
+
+        //while loop - This code says - 
+        /*
+        
+        1. Create a function called doItAgain
+
+        2. set a variable names loopCount and set it's calue to 5.
+
+        3. Create a while loop that runs until the value is less than 0.
+
+        4. Subtract 1 from the loop count each time the loop runs.
+
+        5. Log the number of loop count to the console.
+
+        6. When the while loop is done, log end loop to the console.
+
+        */
+
+        function doItAgain() {
+
+            var loopCount = 5;
+
+            while (loopCount > 0) {
+                console.log("LoopCount is now: " + loopCount);
+
+                loopCount = loopCount - 1;
+            }
+
+            console.log("End Loop");
+
+        }
+
+        //This anonymous inner function selects are button and tells it to run the doItAgain function on a button click of our button with the id "looper". Then after we run the function we style the buttom using js making the text red and background purple.
+
+        document.getElementById('looper').onclick = function () {
+            doItAgain();
+            this.style.color = "red";
+            this.style.background = "purple";
+        }
+
+        //Creating my own while loop
+
+        function myFirstLoop() {
+
+            var loopCount = 50;
+
+            while (loopCount > 0) {
+                console.log("LoopCount is now: " + loopCount);
+
+                loopCount = loopCount - 1;
+            }
+
+            console.log("End Loop");
+        }
+
+        document.getElementById('nick-looper').onclick = function () {
+            myFirstLoop();
+            //When you say this, js means that you are selecting the ID nick-looper which is why it is getting styled. Same thing with the first loop you created with stef.
+            this.style.color = "green";
+            this.style.background = "orange";
+        }
+
+        /*
+            When you reduce a loop you are decrementing the loop.
+        
+        */
+
+        //Combining a loop with an if else statement
+
+        function theThirdLoop() {
+
+            var loopCount = 75;
+
+            while (loopCount > 0) {
+                if (loopCount === 5) {
+                    alert(5);
+                    loopCount = loopCount - 1;
+                } else if (loopCount === 4) {
+                    alert(4);
+                    loopCount = loopCount - 1;
+                }
+                else if (loopCount === 3) {
+                    alert(3);
+                    loopCount = loopCount - 1;
+                }
+                else if (loopCount === 2) {
+                    alert(2);
+                    loopCount = loopCount - 1;
+                }
+                else if (loopCount === 1) {
+                    alert(1);
+                    loopCount = loopCount - 1;
+                } else {
+                    console.log("Loopcount is now: " + loopCount);
+                    loopCount = loopCount - 1;
+                }
+
+
+
+            }
+
+            alert("BOOM!!!");
+        }
+
+
+        document.getElementById('third-looper').onclick = function () {
+            theThirdLoop();
+            this.style.color = "yellow";
+            this.style.background = "black";
+        }
+
+        //Inner HTML Writing Loop
+
+        function writeloop() {
+            var loopCount = 10;
+
+            while (loopCount > 0)
+                var target = document.getElementById("write-looper"); target.innerHTML = "LoopCount: " + loopCount + "<br>" + target.innerHTML;
+            console.log("LoopCount is now: " + loopCount);
+            loopCount = loopCount - 1;
+        }
+
+        console.log("End Loop");
+        var button = document.getElementById("write-looper");
+        button.value = "Loop Complete";
+
+
+
+    </script>
+
+</body>
+
+</html>

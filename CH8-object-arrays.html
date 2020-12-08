@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8 | Object and Arrays</title>
+</head>
+
+<body>
+    <h1>Chapter 8 - Objects and Arrays</h1>
+
+    <p id="type-writer"></p>
+
+    <p id="show-numbers"></p>
+
+    <script>
+
+        // Part 6
+
+        /*
+        
+        The document is an object. All the document is in the DOM model is the page that loads in the browser.
+
+        The document(page that you are viewing) has built in properties and functions (which are also called methods) that are build into the js browser app. These allows you to do things like alerts, console logs, math, etc...
+
+        Properties don't do anything, they just are. Your hair color, nose size, and eye color are your properties. The title of the page, color of the background, and font style are properties of the document (web page). Functions actually do something... they perform a function.
+
+        Window Object
+
+        Properties Example - 
+
+        window.screen.width;
+        window.location;
+
+
+        Methods/Functions of Window Object
+
+        window.print();
+        window.open();
+        window.alert();
+
+        Document Object
+
+        Properties ex:
+
+        document.lastModified;
+        ducument.title;
+
+        Methods and Functions
+
+        document.getElementById();
+        document.write()
+
+        etc..
+
+        ************************
+                Array Notes
+        ************************
+        arrays are like variables except they can hold multiple pieces of information.
+
+        Think of arrays as an egg carton with many slots to hold information.
+
+        Arrays exist because they are a conveinent way to hold a bunch of information.
+
+        Practicle Use - 
+
+        Arrays are often used for shopping carts on websites where people can add and delete items from their shopping cart.
+
+        Example - 
+
+        var dogs = ["poodle, German shpard, Shizu"];
+
+        Print the array to the document...
+
+        document.getElementById('target').innerHTML = dogs;
+
+        Get a specific dog from the array...
+
+        document.getElementById("target").innerHTML = dogs[2];
+
+
+        Arrays can hold numbers, text strings, and many other data types.
+
+        The numbered position of each array item is called it's indexed position.
+
+        Arrays have their own set of methods (functions) built in that you can use.
+        */
+
+        // document.write("Hello World!, My name a Borat. I Like sex")
+
+
+
+        // alert(document.title);
+
+        const giants = ["Daniel", " Saquon", " Darius", " Joe."];
+
+        document.getElementById("type-writer").innerHTML = giants;
+
+        // document.getElementById("type-writer").innerHTML = giants[1];
+
+        //Array of numbers
+
+        const myNumbers = ["1223, 9903848, 00039, 33948"];
+
+        document.getElementById("show-numbers").innerHTML = myNumbers;
+
+        //Array with values on different lines (an alternate way of writing them)
+
+        const foods = [
+            "Steak",
+            " Chicken",
+            " Mac n Cheese",
+            " Cookies"
+
+        ];
+
+        console.log(foods);
+
+        //Array Method Examples
+
+        //sorting an array in alphabetical order
+        alert(foods.sort);
+
+        console.log(foods.sort);
+
+        foods.push(" corn on the cob")
+
+        console.log(foods);
+
+        document.write(foods);
+
+
+    </script>
+</body>
+
+</html>

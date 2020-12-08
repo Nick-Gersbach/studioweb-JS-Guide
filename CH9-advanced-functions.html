@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    2 Types of variables
+
+    1. Global Variables - Any variable that is declared outside of a function. These variables can be used anywhere on the page/document.
+
+    2. Local Variables - Variables that are delcared inside a function. These can only be used locally inside of the function that they were created in. You cannot alert a local variable outside of a function unless you do so by activating the entire function.
+
+ -->
+
+<!-- go to Part 8 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9 - Advanced Functions</title>
+    <style>
+        h1 {
+            background: orange;
+            border-radius: 3px;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 700;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<!-- Jump to Part 6 -->
+
+<body>
+    <h1>Chapter 9 - Advanced Functions</h1>
+    <div>
+
+        <input type="button" id="left-butt" value="Left Button">
+
+        <input type="button" id="right-butt" value="Right-Button">
+
+        <br>
+
+        <button type="button" id="my-info">Show My Info</button>
+
+        <br>
+
+        <button type="age-button" id="age-button">Check Age</button>
+
+    </div>
+    <script>
+        var leftButton = document.getElementById("left-butt").onclick = function () {
+            alert('You clicked the left button!');
+        }
+
+        //Packaging our code in a function
+        function aFunction(aButton) {
+            var button = document.getElementById(aButton);
+            button.value = "You clicked me!"
+        }
+
+        //Activating our code with an event handler 
+        document.getElementById("left-butt").onclick = function () {
+            aFunction(this.id);
+
+        }
+
+        //Activating our code with an event handler 
+        document.getElementById("right-butt").onclick = function () {
+            aFunction(this.id);
+
+        }
+
+        //Creating a function that can return information using the return keyword...
+
+        function singleReturn() {
+            return "The function returned informtation!";
+        }
+
+        alert(singleReturn());
+
+        //Passing an argument with return
+        function returnArg(anArgument) {
+            return "The function returned information " + anArgument;
+        }
+
+        alert(returnArg("This is an argument"));
+
+        //Passing Multiple Arguments (Also called parameters)
+
+        function multiReturn(first, last) {
+            return "Your first name: " + first + " Your last name: " + last;
+        }
+
+        alert(multiReturn("Nicholas", "Gersbach"));
+
+        //Returning multiple pieces of data using one function and an array
+
+        function returnTwo(name, age, color) {
+            var name = "My name is" + " " + name;
+            var age = "I am" + " " + age + " " + "years old";
+            var color = "My favorite color is" + " " + "Black";
+            var myInfo = [name, age, color];
+        }
+
+        document.getElementById("my-info").onclick = function () {
+            alert(returnTwo());
+        }
+
+        //Putting a Conditional Statement in a function
+        function checkage(age) {
+            var oldEnough;
+
+            if (age > 17) {
+                oldEnough = true;
+            } else {
+                oldEnough = false;
+            }
+
+            return oldEnough;
+        }
+
+        document.getElementById("age-button").onclick = function () {
+            console.log(checkage(14));
+        }
+
+
+    </script>
+</body>
+
+</html>

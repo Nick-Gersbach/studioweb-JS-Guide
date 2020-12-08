@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 - Lesson 2 - Variables</title>
+</head>
+
+<body>
+    <h1 id="heading">Chapter 4 Variables</h1>
+
+    <script>
+        /*
+            Variables are virtual containers for information
+
+            Rules for variable Names:
+
+            1. Names must begin with a letter.
+
+            2. Names can also begin with $ and _
+
+            3. Names are case sensitive (y and Y are different variables)
+
+            4. Reserved JavaScript keywords cannot be used
+
+
+            Why do we use variables?
+
+            We create variables so that we can store information in the computers memory. You must do this if you want to run your program.
+        
+        */
+
+        //Creating a variable statment
+        var firstName = 'Nick';
+        var lastName = 'Jimmy';
+        var nameMessage = 'My name is Nicholas Jacob Gersbach';
+
+        // var fullName = firstName + lastName;
+
+        // console.log(fullName);
+
+        //Adding a space to the variable log
+        var fullName = firstName + " " + lastName;
+        console.log(fullName);
+
+
+        var aNumber = '4';
+        var anotherNumber = '6';
+        var addingNumbers = aNumber + anotherNumber;
+        console.log(addingNumbers);
+
+        var aNumber = 4;
+        var anotherNumber = 6;
+        var addingNumbers = aNumber + anotherNumber;
+        console.log(addingNumbers);
+
+
+
+        // console.log(firstName);
+        // alert(firstName);
+
+        // function nameFunc() {
+        //     alert(nameMessage);
+        // }
+
+        //anonymous inner function
+        document.getElementById('heading').onclick = function () {
+            alert(nameMessage);
+        }
+
+    </script>
+</body>
+
+</html>

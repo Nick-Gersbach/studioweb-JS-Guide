@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        div {
+            text-align: center;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+
+<body id="the-body">
+    <div>
+        <button type="button" id="color-changer">Change the Background!</button>
+    </div>
+    <script>
+        document.getElementById("color-changer").onclick = function () {
+            document.getElementById("the-body").style.background = "red";
+        }
+
+    </script>
+</body>
+
+</html>
